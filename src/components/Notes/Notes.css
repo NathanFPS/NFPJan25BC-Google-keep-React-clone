@@ -1,0 +1,55 @@
+.notes {
+    display: flex;
+    justify-content: center;
+}
+
+.note {
+    background-color: white;
+    margin: 10px;
+    width: 280px;
+    border: 1px solid #e0e1e0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.note .title {
+    width: 100%;
+    margin: 15px 0 0 15px;
+}
+
+.note .text {
+    width: 100%;
+    margin: 10px 0 0 15px;
+}
+
+.note .note-footer {
+    margin-top: 15px;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.note-footer .material-symbols-outlined {
+    color: #5f6368;
+}
+
+.note .check-circle {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.note:hover {
+    cursor: pointer;
+}
+
+.note.archived {
+    background-color: #f1f1f1;
+    opacity: 0.5;
+  }
+  
+  .note.archived .material-symbols-outlined {
+    color: gray;
+  }
+  

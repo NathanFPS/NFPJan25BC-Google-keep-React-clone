@@ -1,0 +1,90 @@
+.form-container {
+  background: #fff;
+  max-width: 600px;
+  margin: 40px auto;
+  border: 1px solid #e0e1e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #333;
+}
+
+.note-text, .note-title {
+  border: 1px solid #e0e1e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 12px 15px;
+  margin: 5px 0;
+  width: 100%;
+  background-color: #fff9c4;
+  color: #5f6368;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.note-text:focus, .note-title:focus {
+  border-color: #ffeb3b;
+  background-color: #fff59d;
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.active-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+.active-form form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.close-btn {
+  background: none;
+  border: 1px solid #fbc02d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fbc02d;
+  transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #fff9c4; 
+}
+
+.small-icon {
+  font-size: 1.2rem;
+}
+
+.active-form form .form-actions .icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.active-form form .form-actions .icons i {
+  font-size: 1.5rem;
+  color: #fbc02d; /* Yellow icons */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.active-form form .form-actions .icons i:hover {
+  transform: scale(1.1);
+}
