@@ -43,8 +43,6 @@ const Form = (props) => {
 
   return (
     <div>
-      
-
       <div className="form-container active-form" onClick={formClickHandler}> 
         <form onSubmit={submitFormHandler} className={isActive ? 'form' : ''}>
           {isActive && (

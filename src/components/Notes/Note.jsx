@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const Note = (props) => {
-  const { toggleModal, note, selectedNote, archiveNote, deleteNote } = props;
+  const { toggleModal, note, setSelectedNote, archiveNote, deleteNote } = props;
   const [isHover, setIsHover] = useState(false);
 
   const noteClickHandler = () => {
-    selectedNote(note);
-    toggleModal();
+    setSelectedNote(note); // Correct function name
+    toggleModal();         // Open the modal
   };
 
   const hoverOverHandler = () => {
@@ -18,7 +18,7 @@ const Note = (props) => {
 
   const archiveHandler = (e) => {
     e.stopPropagation();
-    archiveNote(note.id);
+    archiveNote(note.id); // this toggles the archived status
   };
 
   const deleteHandler = (e) => {
@@ -35,11 +35,12 @@ const Note = (props) => {
       onMouseOut={hoverOutHandler}
     >
       {isHover && (
-        <span className="material-symbols-outlined hover small-icon">
-          check_box
+        <span className="material-symbols-outlined check-circle">
+          check_circle
         </span>
       )}
       <div className="title">{note.title}</div>
+      <br />
       <div className="text">{note.text}</div>
       <div 
         className="note-footer" 
@@ -79,6 +80,5 @@ const Note = (props) => {
 };
 
 export default Note;
-
 
 

@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import './Sidebar.css';
 
 function Sidebar({ toggleNotes, toggleArchive }) {
-    const [isArchiveActive, setIsArchiveActive] = useState(false); // Tracks whether archived notes are shown
+    const [isArchiveActive, setIsArchiveActive] = useState(false); 
 
     const handleLightbulbClick = () => {
-        setIsArchiveActive(false); // Set to show regular notes
-        toggleNotes(true); // Show regular notes
+        setIsArchiveActive(false);
+        toggleNotes(true);
     };
 
     const handleArchiveClick = () => {
-        setIsArchiveActive(true); // Set to show archived notes
-        toggleArchive(true); // Show archived notes
+        setIsArchiveActive(true);
+        toggleArchive(true);
     };
 
     return (

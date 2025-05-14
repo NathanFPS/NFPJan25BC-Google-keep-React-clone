@@ -80,7 +80,7 @@
 
 .active-form form .form-actions .icons i {
   font-size: 1.5rem;
-  color: #fbc02d; /* Yellow icons */
+  color: #fbc02d;
   cursor: pointer;
   transition: transform 0.3s;
 }

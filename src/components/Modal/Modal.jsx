@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Form from '../Form/Form';
 import './Modal.css'
 
-const Modal= (props) => {
+const Modal = (props) => {
   const { isModalOpen, selectedNote, toggleModal, editNote, setSelectedNote } = props;
 
   const [hasCursor, setHasCursor] = useState(false);
@@ -12,7 +12,7 @@ const Modal= (props) => {
   const handleMouseOutModal = () => setHasCursor(false);
   
   return (
-    <div className={`modal ${isModalOpen ? 'open-modal' : ''}`} onClick={handleCloseModal}>
+    <div className={`modal ${isModalOpen ? "open-modal" : ""}`} onClick={handleCloseModal}>
       <div className="modal-content" onMouseOver={handleMouseOverModal} onMouseOut={handleMouseOutModal}>
         <Form 
           selectedNote={selectedNote}

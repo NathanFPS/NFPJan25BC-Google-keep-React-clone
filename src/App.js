@@ -41,7 +41,7 @@ const App = () => {
     setNotes((prevNotes) =>
       prevNotes.map((note) => {
         if (note.id === id) {
-          note.archived = !note.archived; // Toggle archived status for the specific note
+          note.archived = !note.archived;
         }
         return note;
       })
@@ -54,22 +54,10 @@ const App = () => {
 
   const toggleNotes = (showNotes) => {
     setShowArchive(false);
-    setNotes((prevNotes) =>
-      prevNotes.map((note) => {
-        note.archived = !showNotes;
-        return note;
-      })
-    );
   };
 
   const toggleArchive = (showArchive) => {
     setShowArchive(true);
-    setNotes((prevNotes) =>
-      prevNotes.map((note) => ({
-        ...note,
-        archived: showArchive,
-      }))
-    );
   };
 
   return (
@@ -82,7 +70,7 @@ const App = () => {
         deleteNote={deleteNote}
         archiveNote={archiveNote}
         toggleModal={toggleModal}
-        selectedNote={setSelectedNote}
+        setSelectedNote={setSelectedNote} // ✅ Correct name
       />
       {isModalOpen && (
         <Modal

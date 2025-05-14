@@ -10,6 +10,7 @@
     border: 1px solid #e0e1e0;
     border-radius: 8px;
     position: relative;
+    transition: box-shadow 0.2s ease, opacity 0.7s ease;
 }
 
 .note .title {
@@ -27,7 +28,14 @@
     display: flex;
     padding: 0;
     justify-content: center;
+    transition: visibility 0.2s ease, opacity 0.7s ease;
+    opacity: 0;
     visibility: hidden;
+}
+
+.note:hover .note-footer {
+    opacity: 1;
+    visibility: visible;
 }
 
 .note-footer .material-symbols-outlined {
@@ -47,9 +55,10 @@
 .note.archived {
     background-color: #f1f1f1;
     opacity: 0.5;
-  }
+}
   
-  .note.archived .material-symbols-outlined {
+.note.archived .material-symbols-outlined {
     color: gray;
-  }
+}
+
   
